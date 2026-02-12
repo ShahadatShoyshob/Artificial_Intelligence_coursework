@@ -1,0 +1,14 @@
+- Step 1
+"Open a PowerShell Window as Administrator"
+
+- Step 2
+"Point the terminal to source file"
+
+- Step 3
+Now run below:
+python -m venv pybullet_venv
+pybullet_venv\Scripts\activate
+
+- Step 4
+Run:
+py mountain_climb_env.py

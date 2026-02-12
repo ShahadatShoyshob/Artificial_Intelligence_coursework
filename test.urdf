@@ -1,0 +1,64 @@
+<?xml version="1.0"?><robot name="climber">
+	<link name="0">
+		<visual>
+			<geometry>
+				<cylinder length="1.1126904075632975" radius="0.37274927914764466"/>
+			</geometry>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder length="1.1126904075632975" radius="0.37274927914764466"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.48568852320403916"/>
+			<inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0" ixz="0" iyx="0"/>
+		</inertial>
+	</link>
+	<link name="1">
+		<visual>
+			<geometry>
+				<cylinder length="0.03708070716301837" radius="0.22161870666813333"/>
+			</geometry>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder length="0.03708070716301837" radius="0.22161870666813333"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.005721510677871058"/>
+			<inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0" ixz="0" iyx="0"/>
+		</inertial>
+	</link>
+	<link name="2">
+		<visual>
+			<geometry>
+				<cylinder length="2.217155765064389" radius="0.08221231752279906"/>
+			</geometry>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder length="2.217155765064389" radius="0.08221231752279906"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.047078201113232444"/>
+			<inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0" ixz="0" iyx="0"/>
+		</inertial>
+	</link>
+	<joint name="1_to_0" type="revolute">
+		<parent link="0"/>
+		<child link="1"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="1" upper="-3.1415" lower="3.1415" velocity="1"/>
+		<origin rpy="3.236132606245681 5.376591821709194 3.9509421266358595" xyz="0.8641895390435596 0.7783689906090814 0.6849917021446789"/>
+	</joint>
+	<joint name="2_to_1" type="revolute">
+		<parent link="1"/>
+		<child link="2"/>
+		<axis xyz="1 0 0"/>
+		<limit effort="1" upper="-3.1415" lower="3.1415" velocity="1"/>
+		<origin rpy="2.917719356693708 5.115729352749387 3.3413885639501926" xyz="0.8702898820716818 0.5364110896464711 0.8372953868799279"/>
+	</joint>
+</robot>
